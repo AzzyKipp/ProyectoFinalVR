@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 015e9e492ced157498913c229c9f2a6c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scripts/System/CCDatabase.cs
+  uploadId: 991078

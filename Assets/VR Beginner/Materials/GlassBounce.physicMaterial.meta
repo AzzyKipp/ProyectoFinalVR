@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca7e678f610631948b4ea5bc5740f361
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Materials/GlassBounce.physicMaterial
+  uploadId: 991078

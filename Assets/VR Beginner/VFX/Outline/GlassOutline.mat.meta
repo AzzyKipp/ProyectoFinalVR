@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9891d27cdd3cb4147b014da22707e5b3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/VFX/Outline/GlassOutline.mat
+  uploadId: 991078

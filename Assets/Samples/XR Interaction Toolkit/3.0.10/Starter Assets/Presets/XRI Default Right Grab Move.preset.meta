@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fdc4f514b7b1e9c4eb39713ad9dd4eba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Presets/XRI
+    Default Right Grab Move.preset
+  uploadId: 991078

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bbb56ac3cf3c61a46ab3887c0fdbda8f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/DemoSceneAssets/Materials/Concrete
+    Dark Blue.mat
+  uploadId: 991078

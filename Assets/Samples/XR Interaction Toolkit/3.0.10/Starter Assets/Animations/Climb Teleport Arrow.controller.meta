@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: db6239f7ccb29ca4aac63126c6a35e7d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Animations/Climb
+    Teleport Arrow.controller
+  uploadId: 991078

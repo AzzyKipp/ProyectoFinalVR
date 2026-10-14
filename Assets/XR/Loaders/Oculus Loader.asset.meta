@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0cf6b053d8a498b429671ddf844f6068
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/XR/Loaders/Oculus Loader.asset
+  uploadId: 991078

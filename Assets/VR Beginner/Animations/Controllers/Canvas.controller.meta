@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 346e21770b73e6143b2e8a6a003c5c1d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Animations/Controllers/Canvas.controller
+  uploadId: 991078

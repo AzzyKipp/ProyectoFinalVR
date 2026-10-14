@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be1e10ce8a6f8cc4fb08d11c7f722469
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Materials/Telport
+    Area.mat
+  uploadId: 991078

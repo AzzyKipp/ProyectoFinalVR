@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5d3a60dbf2f04694f9060712df89debb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Presets/XRI
+    Default Snap Turn.preset
+  uploadId: 991078

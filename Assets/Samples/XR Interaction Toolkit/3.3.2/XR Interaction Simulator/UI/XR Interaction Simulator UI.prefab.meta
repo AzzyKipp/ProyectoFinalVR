@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be0c86f67bf3f46659373b3776d9ecbb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/UI/XR
+    Interaction Simulator UI.prefab
+  uploadId: 991078

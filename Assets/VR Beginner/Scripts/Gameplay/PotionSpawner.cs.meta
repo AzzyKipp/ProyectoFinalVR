@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 10203940a300097439a239fa42709a06
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scripts/Gameplay/PotionSpawner.cs
+  uploadId: 991078

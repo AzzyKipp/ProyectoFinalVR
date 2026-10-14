@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 21a9b655c2d703344abc684145092a05
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Prefabs/PrototypeScene/TeleportationAnchorPrototype.prefab
+  uploadId: 991078

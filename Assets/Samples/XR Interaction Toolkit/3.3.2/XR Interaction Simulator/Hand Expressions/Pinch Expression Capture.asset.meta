@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 72c39edbc5fea456ab30a2ef2ea6d4d0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/Hand
+    Expressions/Pinch Expression Capture.asset
+  uploadId: 991078

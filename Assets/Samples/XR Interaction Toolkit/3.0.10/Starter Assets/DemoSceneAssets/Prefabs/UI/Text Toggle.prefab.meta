@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6a448845c7017044e8a9f3d711cfe825
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/DemoSceneAssets/Prefabs/UI/Text
+    Toggle.prefab
+  uploadId: 991078

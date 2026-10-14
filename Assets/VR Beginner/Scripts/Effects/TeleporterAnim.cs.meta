@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8252fcde549ed1c46b71d64b4166f814
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scripts/Effects/TeleporterAnim.cs
+  uploadId: 991078

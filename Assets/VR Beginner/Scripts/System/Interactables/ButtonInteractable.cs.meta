@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cbad2b89699385f4c8ba904f6ee36b8a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scripts/System/Interactables/ButtonInteractable.cs
+  uploadId: 991078

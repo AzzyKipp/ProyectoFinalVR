@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 893219773891c784ab469a39151879b4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Prefabs/Teleport/Directional
+    Teleport Reticle.prefab
+  uploadId: 991078

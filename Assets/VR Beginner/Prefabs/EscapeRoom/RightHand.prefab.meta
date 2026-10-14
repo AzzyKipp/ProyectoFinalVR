@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fd964ab92a61d11448a9acbf2d78af8d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Prefabs/EscapeRoom/RightHand.prefab
+  uploadId: 991078

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7935643ebd10bb4f85c1c8490a476ec
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scenes/Final/EscapeRoom/OcclusionCullingData.asset
+  uploadId: 991078

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7744d237699c1db468e74d9ce626dd87
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scenes/Templates/EmptySceneSettings.lighting
+  uploadId: 991078

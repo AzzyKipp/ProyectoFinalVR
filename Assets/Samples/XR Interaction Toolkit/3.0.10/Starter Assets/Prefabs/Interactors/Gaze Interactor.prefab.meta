@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b84cd05e1160fe34cab2585022c8cd99
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Prefabs/Interactors/Gaze
+    Interactor.prefab
+  uploadId: 991078

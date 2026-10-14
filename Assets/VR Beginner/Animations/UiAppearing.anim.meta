@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 248087148bcd75a4c92f4349a3720162
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Animations/UiAppearing.anim
+  uploadId: 991078

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c3d4ecc12d5e0f14c93fd734af32ab63
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/Presets/XRI
+    Default Left Controller InputActionManager.preset
+  uploadId: 991078

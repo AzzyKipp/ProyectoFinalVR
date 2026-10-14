@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 56686f82f64b0af4688a89676403a500
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.0.10/Starter Assets/DemoSceneAssets/Prefabs/UI/Icon
+    Button.prefab
+  uploadId: 991078

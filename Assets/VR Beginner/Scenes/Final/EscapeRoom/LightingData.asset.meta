@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5f76105c17a78f948ae2b622ae8e3d1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scenes/Final/EscapeRoom/LightingData.asset
+  uploadId: 991078

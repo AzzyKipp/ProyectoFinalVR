@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 756f64bc53d8ad3498e7d2a19c8a904d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Animations/UI/Proto_watch_close.anim
+  uploadId: 991078

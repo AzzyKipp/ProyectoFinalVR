@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bd3da505ae8a0b14f99978167f68918c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/VFX/Teleporter/TeleporterGlyph.mat
+  uploadId: 991078

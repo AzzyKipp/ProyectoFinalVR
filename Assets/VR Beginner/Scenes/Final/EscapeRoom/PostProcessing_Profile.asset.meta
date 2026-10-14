@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7cd79d86d8be5e44c931d702e8c3cb8f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Scenes/Final/EscapeRoom/PostProcessing_Profile.asset
+  uploadId: 991078

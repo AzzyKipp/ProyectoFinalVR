@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 368d6774d639c2e4187528ca3678eab5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Prefabs/System/XR Origin (VR).prefab
+  uploadId: 991078

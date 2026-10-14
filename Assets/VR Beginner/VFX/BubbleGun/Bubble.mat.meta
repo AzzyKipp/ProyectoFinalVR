@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb49b80fff95a7b449538c354c835051
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/VFX/BubbleGun/Bubble.mat
+  uploadId: 991078

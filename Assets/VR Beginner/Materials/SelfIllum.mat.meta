@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5347717e71dbf364ebee0d38ac13eba0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/VR Beginner/Materials/SelfIllum.mat
+  uploadId: 991078

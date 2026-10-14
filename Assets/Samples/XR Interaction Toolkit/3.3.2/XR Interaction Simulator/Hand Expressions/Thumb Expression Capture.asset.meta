@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b8da6254ca32341d6b80019659732616
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163264
+  packageName: The Escape Room | 3D VR Sample Project
+  packageVersion: 1.7
+  assetPath: Assets/Samples/XR Interaction Toolkit/3.3.2/XR Interaction Simulator/Hand
+    Expressions/Thumb Expression Capture.asset
+  uploadId: 991078
