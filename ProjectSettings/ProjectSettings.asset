@@ -146,8 +146,7 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
   preloadedAssets:
-  - {fileID: -802529340814861761, guid: a422e2a2e6c83184e9b23d6413331359, type: 2}
-  - {fileID: 11400000, guid: 398d945149746a94899cafbfeddf8c9f, type: 2}
+  - {fileID: 11400000, guid: 03b4b390d34f69b40b3906e74c853d9d, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -400,7 +399,7 @@ PlayerSettings:
     m_DynamicBatching: 0
   - m_BuildTarget: Android
     m_StaticBatching: 1
-    m_DynamicBatching: 0
+    m_DynamicBatching: 1
   - m_BuildTarget: iPhone
     m_StaticBatching: 1
     m_DynamicBatching: 0
@@ -873,7 +872,7 @@ PlayerSettings:
   cloudProjectId: 2092746f-463c-4e97-9411-8f72b480d530
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: ProyectoFinalVR
   organizationId: azzy_sleepyhead
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
