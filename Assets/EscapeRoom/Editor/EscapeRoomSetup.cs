@@ -113,6 +113,9 @@ namespace EscapeRoom.EditorTools
                 Note("Desactivado placeholder [CONTROLLABLES]/[BuildingBlock] Dial 1 (cubo en el origen).");
             }
 
+            // Ajustes posteriores (agarre de ingredientes, radio por etapas, bruja, efecto de teleport)
+            Note(EscapeRoomTweaks.Apply(false));
+
             EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
             Note("Configuración completada.");
             return string.Join("\n", Report);
@@ -541,7 +544,7 @@ namespace EscapeRoom.EditorTools
             };
             ctrl.tuningClip = Clip(Sfx + "FutzedRadioTuning.ogg");
             ctrl.clickClip = Clip(Sfx + "SFXCauldronButton03.ogg");
-            Note("Radio: Dial1 gira (twist) y reproduce Audio_1/2/3 en los niveles 1/2/3.");
+            Note("Radio: Dial1 gira (twist); al cambiar de nivel suena solo la pista de la etapa actual (Audio_1/2/3).");
         }
 
         // =====================================================================
@@ -915,7 +918,7 @@ namespace EscapeRoom.EditorTools
             ctrl.attackClip = Clip(Sfx + "SFXWandShoot.ogg");
             ctrl.appearClip = Clip(Sfx + "SFXFireFlare.ogg");
             witch.SetActive(false);
-            Note("Bruja: aparece al acabarse el tiempo, camina hacia el jugador (NavMesh), 2 ataques = derrota, 3 libros = muere.");
+            Note("Bruja: aparece al acabarse el tiempo, camina hacia el jugador (NavMesh), 4 ataques = derrota, 3 libros = muere.");
             return ctrl;
         }
 

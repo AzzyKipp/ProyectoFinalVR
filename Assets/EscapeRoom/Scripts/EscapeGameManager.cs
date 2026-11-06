@@ -32,7 +32,7 @@ namespace EscapeRoom
 
         [Header("Jugador")]
         [Tooltip("Golpes de la bruja para perder.")]
-        public int hitsToLose = 2;
+        public int hitsToLose = 4;
         [Tooltip("Segundos antes de reiniciar la escena al perder.")]
         public float restartDelay = 7f;
 

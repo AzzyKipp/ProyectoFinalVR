@@ -6,7 +6,7 @@ namespace EscapeRoom
 {
     /// <summary>
     /// La bruja: aparece cuando se acaba el tiempo, persigue lentamente al jugador caminando,
-    /// lo ataca (2 golpes = derrota) y se ríe de vez en cuando. Muere con 3 libros lanzados.
+    /// lo ataca (4 golpes = derrota) y se ríe de vez en cuando. Muere con 3 libros lanzados.
     /// </summary>
     public class WitchController : MonoBehaviour
     {

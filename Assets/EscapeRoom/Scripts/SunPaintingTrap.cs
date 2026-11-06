@@ -27,6 +27,9 @@ namespace EscapeRoom
 
         private bool _triggered;
 
+        /// <summary>True en cuanto el jugador agarró el cuadro (y empezó a convertirse en la llave).</summary>
+        public bool Triggered => _triggered;
+
         private void OnEnable()
         {
             if (grabbable != null) grabbable.WhenPointerEventRaised += HandlePointerEvent;
