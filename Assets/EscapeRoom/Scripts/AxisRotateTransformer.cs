@@ -10,15 +10,20 @@ namespace EscapeRoom
     /// que pasa por su pivote, con límites de ángulo (puertas, tapas, perillas, palancas).
     ///  - Orbit: el ángulo sigue la posición de la mano alrededor del pivote (puertas, tapas).
     ///  - Twist: el ángulo sigue el giro de la muñeca (perillas y diales pequeños).
+    ///  - OrbitOrTwist: usa el que más se mueva en cada momento; sirve para perillas que se giran
+    ///    con la muñeca o arrastrando la mano/el rayo alrededor del centro (útil en el simulador).
     /// </summary>
     public class AxisRotateTransformer : MonoBehaviour, ITransformer
     {
-        public enum RotationMode { Orbit, Twist }
+        public enum RotationMode { Orbit, Twist, OrbitOrTwist }
 
         [Tooltip("Objeto que gira (por defecto, el target del Grabbable). Su pivote es el centro de giro.")]
         public Transform target;
 
         public RotationMode mode = RotationMode.Orbit;
+
+        [Tooltip("En OrbitOrTwist, distancia mínima de la mano al eje para usar el giro alrededor del centro (m).")]
+        public float minOrbitRadius = 0.02f;
 
         [Tooltip("Eje de giro en el espacio local del target.")]
         public Vector3 localAxis = Vector3.up;
@@ -103,25 +108,32 @@ namespace EscapeRoom
             Vector3 axis = WorldAxis;
             float step = 0f;
 
-            if (mode == RotationMode.Orbit)
+            // Giro de la mano alrededor del eje
+            float orbitStep = 0f;
+            Vector3 v = Vector3.ProjectOnPlane(grab.position - target.position, axis);
+            float minSqr = mode == RotationMode.OrbitOrTwist ? minOrbitRadius * minOrbitRadius : 1e-6f;
+            if (v.sqrMagnitude > minSqr && _prevVector.sqrMagnitude > minSqr)
             {
-                Vector3 v = Vector3.ProjectOnPlane(grab.position - target.position, axis);
-                if (v.sqrMagnitude > 1e-6f && _prevVector.sqrMagnitude > 1e-6f)
-                {
-                    step = Vector3.SignedAngle(_prevVector, v, axis);
-                }
-                _prevVector = v;
+                orbitStep = Vector3.SignedAngle(_prevVector, v, axis);
             }
-            else
+            _prevVector = v;
+
+            // Giro de la muñeca alrededor del eje
+            float twistStep = 0f;
+            Quaternion delta = grab.rotation * Quaternion.Inverse(_prevRotation);
+            delta.ToAngleAxis(out float a, out Vector3 deltaAxis);
+            if (a > 180f) a -= 360f;
+            if (!float.IsNaN(deltaAxis.x) && deltaAxis.sqrMagnitude > 1e-6f)
             {
-                Quaternion delta = grab.rotation * Quaternion.Inverse(_prevRotation);
-                delta.ToAngleAxis(out float a, out Vector3 deltaAxis);
-                if (a > 180f) a -= 360f;
-                if (!float.IsNaN(deltaAxis.x) && deltaAxis.sqrMagnitude > 1e-6f)
-                {
-                    step = a * Vector3.Dot(deltaAxis.normalized, axis);
-                }
-                _prevRotation = grab.rotation;
+                twistStep = a * Vector3.Dot(deltaAxis.normalized, axis);
+            }
+            _prevRotation = grab.rotation;
+
+            switch (mode)
+            {
+                case RotationMode.Orbit: step = orbitStep; break;
+                case RotationMode.Twist: step = twistStep; break;
+                default: step = Mathf.Abs(orbitStep) >= Mathf.Abs(twistStep) ? orbitStep : twistStep; break;
             }
 
             _accumulated += step;

@@ -30,6 +30,17 @@ namespace EscapeRoom
         public float temperatureRequired = 90f;
         public PokeButton brewButton;
 
+        [Header("Ayuda con las palancas")]
+        [Tooltip("Al soltar una palanca que ya pasó el umbral de ayuda, termina sola su recorrido.")]
+        public bool assistLevers = true;
+        [Tooltip("Recorrido (0-1) de la palanca de fuerza a partir del cual se completa sola al soltarla.")]
+        public float spinAssistNormalized = 0.3f;
+        [Tooltip("Grados de la perilla de temperatura a partir de los cuales se completa sola al soltarla.")]
+        public float temperatureAssistAngle = 35f;
+        public float assistDuration = 0.35f;
+        [Tooltip("Sonido cuando se completa un paso (tapa, fuerza, temperatura).")]
+        public AudioClip stepDoneClip;
+
         [Header("Poción")]
         public PotionItem potion;
         public Transform potionSpawn;
@@ -52,11 +63,86 @@ namespace EscapeRoom
         public bool TemperatureDone => temperatureLever == null || Mathf.Abs(temperatureLever.Angle) >= temperatureRequired;
 
         private bool[] _consumed;
+        private bool _lidWasClosed, _spinWasDone, _tempWasDone;
+        private Coroutine _spinAssist, _tempAssist;
 
         private void Awake()
         {
             _consumed = new bool[ingredients != null ? ingredients.Length : 0];
             if (potZone == null) potZone = transform;
+        }
+
+        private void Start()
+        {
+            _lidWasClosed = LidClosed;
+            _spinWasDone = SpinDone;
+            _tempWasDone = TemperatureDone;
+        }
+
+        private void Update()
+        {
+            if (Brewed) return;
+
+            if (assistLevers)
+            {
+                // Palanca de fuerza: si se suelta pasado el umbral, se desliza sola hasta el final.
+                if (spinLever != null && _spinAssist == null && !spinLever.IsGrabbed && !SpinDone
+                    && spinLever.Normalized >= spinAssistNormalized)
+                {
+                    _spinAssist = StartCoroutine(AssistSpin());
+                }
+                // Perilla de temperatura: si se suelta pasado el umbral, gira sola hasta la temperatura pedida.
+                if (temperatureLever != null && _tempAssist == null && !temperatureLever.IsGrabbed && !TemperatureDone
+                    && Mathf.Abs(temperatureLever.Angle) >= temperatureAssistAngle)
+                {
+                    _tempAssist = StartCoroutine(AssistTemperature());
+                }
+            }
+
+            // Aviso cuando se completa cada paso
+            CheckStep(LidClosed, ref _lidWasClosed, "¡Tapa cerrada!");
+            CheckStep(SpinDone, ref _spinWasDone, "¡Fuerza al máximo!");
+            CheckStep(TemperatureDone, ref _tempWasDone, "¡Temperatura lista!");
+        }
+
+        private void CheckStep(bool done, ref bool wasDone, string message)
+        {
+            if (done && !wasDone)
+            {
+                if (sfx != null && stepDoneClip != null) sfx.PlayOneShot(stepDoneClip);
+                if (EscapeGameManager.Instance != null)
+                    EscapeGameManager.Instance.ShowMessage(message, 1.8f, EscapeGameManager.Instance.goodColor);
+            }
+            wasDone = done;
+        }
+
+        private IEnumerator AssistSpin()
+        {
+            float from = spinLever.Distance;
+            float to = spinLever.maxDistance;
+            for (float t = 0f; t < 1f; t += Time.deltaTime / Mathf.Max(0.01f, assistDuration))
+            {
+                if (spinLever.IsGrabbed || Brewed) { _spinAssist = null; yield break; }
+                spinLever.SetDistance(Mathf.Lerp(from, to, Mathf.SmoothStep(0f, 1f, t)));
+                yield return null;
+            }
+            spinLever.SetDistance(to);
+            _spinAssist = null;
+        }
+
+        private IEnumerator AssistTemperature()
+        {
+            float from = temperatureLever.Angle;
+            float sign = Mathf.Sign(from);
+            float to = Mathf.Clamp(sign * (temperatureRequired + 5f), temperatureLever.minAngle, temperatureLever.maxAngle);
+            for (float t = 0f; t < 1f; t += Time.deltaTime / Mathf.Max(0.01f, assistDuration))
+            {
+                if (temperatureLever.IsGrabbed || Brewed) { _tempAssist = null; yield break; }
+                temperatureLever.SetAngle(Mathf.Lerp(from, to, Mathf.SmoothStep(0f, 1f, t)));
+                yield return null;
+            }
+            temperatureLever.SetAngle(to);
+            _tempAssist = null;
         }
 
         private void OnEnable()

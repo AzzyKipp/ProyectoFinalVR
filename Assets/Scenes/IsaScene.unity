@@ -951,7 +951,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.13, z: 0.12}
+  m_Size: {x: 0.13, y: 0.16, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &42485560
 Transform:
@@ -17298,6 +17298,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03464644, y: 0.45074922, z: 0.30646604}
   m_Center: {x: 0.08541252, y: 0.14907005, z: 0.008560894}
+--- !u!1 &571011620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571011621}
+  - component: {fileID: 571011622}
+  m_Layer: 0
+  m_Name: TemperatureLever Ray Drag Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &571011621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571011620}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000000013372328, y: 0.8980103, z: 0.43997446, w: 0.0000000027293603}
+  m_LocalPosition: {x: -0.49300003, y: 0.3668455, z: -0.5777956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1344177576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &571011622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571011620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf2a74d69b1c1e41916d2a7afdff5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Surfaces.PlaneSurface
+  _facing: 1
+  _doubleSided: 1
 --- !u!1 &571049720
 GameObject:
   m_ObjectHideFlags: 0
@@ -21073,6 +21119,11 @@ MonoBehaviour:
   temperatureLever: {fileID: 1344177591}
   temperatureRequired: 90
   brewButton: {fileID: 133945058}
+  assistLevers: 1
+  spinAssistNormalized: 0.3
+  temperatureAssistAngle: 35
+  assistDuration: 0.35
+  stepDoneClip: {fileID: 8300000, guid: 3785bef4b4d8bf74bb630d40dbf376a6, type: 3}
   potion: {fileID: 1420740207}
   potionSpawn: {fileID: 1270326940}
   potionLaunchVelocity: {x: 0, y: 3.6, z: -1.5}
@@ -23411,6 +23462,7 @@ Transform:
   m_Children:
   - {fileID: 1830921133}
   - {fileID: 1934966763}
+  - {fileID: 1930134549}
   m_Father: {fileID: 544310156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &852112714
@@ -26773,6 +26825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeRoom.AxisRotateTransformer
   target: {fileID: 963833088}
   mode: 0
+  minOrbitRadius: 0.02
   localAxis: {x: 1, y: 0, z: 0}
   startAngle: 40.678814
   minAngle: 0
@@ -29151,6 +29204,73 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
+--- !u!1 &1103462305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103462306}
+  - component: {fileID: 1103462308}
+  - component: {fileID: 1103462307}
+  m_Layer: 0
+  m_Name: Ray Interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1103462306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103462305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1344177585}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1103462307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103462305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86ba9d4c5126e48bfef9b0c9550e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.RayInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 1344177590}
+  _surface: {fileID: 1103462308}
+  _selectSurface: {fileID: 571011622}
+  _movementProvider: {fileID: 0}
+  _tiebreakerScore: 0
+--- !u!114 &1103462308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103462305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2140d2b457bea84881488302059889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Surfaces.ColliderSurface
+  _collider: {fileID: 856569094}
 --- !u!1 &1108577851
 GameObject:
   m_ObjectHideFlags: 0
@@ -29303,6 +29423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeRoom.AxisRotateTransformer
   target: {fileID: 1108577855}
   mode: 0
+  minOrbitRadius: 0.02
   localAxis: {x: 0, y: 1, z: 0}
   startAngle: 0
   minAngle: 0
@@ -39035,6 +39156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeRoom.AxisRotateTransformer
   target: {fileID: 1334594333}
   mode: 1
+  minOrbitRadius: 0.02
   localAxis: {x: 0, y: 0, z: 1}
   startAngle: 0
   minAngle: -300
@@ -39714,6 +39836,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1602892863}
+    - targetCorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571011621}
     - targetCorrespondingSourceObject: {fileID: -3302564363896088922, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
         type: 3}
       insertIndex: -1
@@ -39730,6 +39856,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1089272960}
+    - targetCorrespondingSourceObject: {fileID: 2047668364171312032, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1365969595}
     - targetCorrespondingSourceObject: {fileID: 5399084693089802829, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
         type: 3}
       insertIndex: -1
@@ -39746,6 +39876,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 98392882}
+    - targetCorrespondingSourceObject: {fileID: 5399084693089802829, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1729833611}
     - targetCorrespondingSourceObject: {fileID: 3473678196792416672, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
         type: 3}
       insertIndex: -1
@@ -39758,6 +39892,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 911479835}
+    - targetCorrespondingSourceObject: {fileID: 3473678196792416672, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1103462306}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 1a3240bcf8b6ca44ab94979b7e24cde1,
         type: 3}
@@ -40075,7 +40213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscapeRoom.AxisRotateTransformer
   target: {fileID: 1344177585}
-  mode: 1
+  mode: 2
+  minOrbitRadius: 0.02
   localAxis: {x: 0, y: 1, z: 0}
   startAngle: 0
   minAngle: -170
@@ -40466,6 +40605,52 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
+--- !u!1 &1365969594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365969595}
+  - component: {fileID: 1365969596}
+  m_Layer: 0
+  m_Name: SpinForceLever Ray Drag Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1365969595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365969594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.009297455, y: 0.7155765, z: 0.6984136, w: -0.009074457}
+  m_LocalPosition: {x: -0.15873957, y: 0.034455482, z: 0.0008176081}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1344177588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365969596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365969594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf2a74d69b1c1e41916d2a7afdff5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Surfaces.PlaneSurface
+  _facing: 1
+  _doubleSided: 1
 --- !u!1001 &1367094310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42600,7 +42785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3778320226071203013, guid: b46a848a5ea4d0f4d9784aaaff85e23a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739000973}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1931822362451153842, guid: b46a848a5ea4d0f4d9784aaaff85e23a,
         type: 3}
@@ -42636,6 +42825,12 @@ MonoBehaviour:
 --- !u!4 &1485454338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b46a848a5ea4d0f4d9784aaaff85e23a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1485454335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1485454339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3778320226071203013, guid: b46a848a5ea4d0f4d9784aaaff85e23a,
     type: 3}
   m_PrefabInstance: {fileID: 1485454335}
   m_PrefabAsset: {fileID: 0}
@@ -48404,6 +48599,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2533459, y: 0.10218288, z: 0.19035107}
   m_Center: {x: 0.028774079, y: 0.019144958, z: 0.016123008}
+--- !u!1 &1729833610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729833611}
+  - component: {fileID: 1729833613}
+  - component: {fileID: 1729833612}
+  m_Layer: 0
+  m_Name: Ray Interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1729833611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729833610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2108486912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729833612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729833610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86ba9d4c5126e48bfef9b0c9550e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.RayInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 2108486916}
+  _surface: {fileID: 1729833613}
+  _selectSurface: {fileID: 1365969596}
+  _movementProvider: {fileID: 0}
+  _tiebreakerScore: 0
+--- !u!114 &1729833613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729833610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2140d2b457bea84881488302059889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Surfaces.ColliderSurface
+  _collider: {fileID: 42485559}
 --- !u!1 &1730341148
 GameObject:
   m_ObjectHideFlags: 0
@@ -48667,6 +48929,60 @@ Transform:
   - {fileID: 5006512735054215881}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1739000972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739000973}
+  - component: {fileID: 1739000974}
+  m_Layer: 0
+  m_Name: HouseExteriorShell (Collider interior)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739000973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739000972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1485454339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1739000974
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739000972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: fa1be7d6677ddfb4faced9933d76eb37, type: 2}
 --- !u!1 &1740925305
 GameObject:
   m_ObjectHideFlags: 0
@@ -52326,6 +52642,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929957406}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1930134548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930134549}
+  - component: {fileID: 1930134551}
+  - component: {fileID: 1930134550}
+  m_Layer: 0
+  m_Name: HandGrab Interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930134549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930134548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 846752351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930134550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930134548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1bc992571301d4a9602ac95ef4c71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 846752345}
+  _rigidbody: {fileID: 846752346}
+  _grabSource: {fileID: 0}
+  _useClosestPointAsGrabSource: 0
+  _releaseDistance: 0
+  _resetGrabOnGrabsUpdated: 1
+--- !u!114 &1930134551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930134548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 846752345}
+  _rigidbody: {fileID: 846752346}
+  _resetGrabOnGrabsUpdated: 1
+  _scoringModifier:
+    _positionRotationWeight: 0.5
+  _slippiness: 0
+  _supportedGrabTypes: 3
+  _pinchGrabRules:
+    _thumbRequirement: 0
+    _indexRequirement: 1
+    _middleRequirement: 1
+    _ringRequirement: 0
+    _pinkyRequirement: 0
+    _unselectMode: 1
+  _palmGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 0
+    _middleRequirement: 2
+    _ringRequirement: 2
+    _pinkyRequirement: 1
+    _unselectMode: 0
+  _movementProvider: {fileID: 0}
+  _handAligment: 0
+  _handGrabPoses: []
 --- !u!1 &1934891245
 GameObject:
   m_ObjectHideFlags: 0
